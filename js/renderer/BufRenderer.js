@@ -1,6 +1,6 @@
 function BufferRenderer(gl, extensions, infoRender) {
 
-	this.render = function(mode, start, count) {
+	this.draw = function(mode, start, count) {
 		gl.drawArrays(mode, start, count);
 
 		if(mode === gl.TRIANGLES) infoRender.faces += count / 3;

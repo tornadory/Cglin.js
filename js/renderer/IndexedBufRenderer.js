@@ -1,4 +1,4 @@
-function IndexedBufferRenderer(gl, extensions, infoRender) {
+function IndexedBufRenderer(gl, extensions, infoRender) {
 
 	var mode;
 
@@ -17,7 +17,7 @@ function IndexedBufferRenderer(gl, extensions, infoRender) {
 
 	}
 
-	function render(start, count) {
+	function draw(start, count) {
 
 		gl.drawElements(mode, count, type, start * bytesPerElement);
 

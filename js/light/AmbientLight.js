@@ -1,7 +1,10 @@
-(function(Dc) {
-	var AmbientLight = function() {
-		Dc.Light.call(this);
+function AmbientLight() {
+  Light.call(this);
 
-		this.type = 'AmbientLight';
-	}
-})(Dc)
+  this.type = "AmbientLight";
+}
+AmbientLight.prototype = Object.assign(Object.create(Light.prototype), {
+	constructor: AmbientLight,
+	isAmbientLight: true
+  });
+  

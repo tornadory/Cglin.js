@@ -1,7 +1,10 @@
-(function(Dc) {
-	var DirectionLight = function() {
-		Dc.Light.call(this);
+var DirectionLight = function() {
+  Light.call(this);
 
-		this.type = 'DirectionLight';
-	}
-})(Dc)
+  this.type = "DirectionLight";
+};
+
+DirectionLight.prototype = Object.assign(Object.create(Light.prototype), {
+  constructor: DirectionLight,
+  isDirectionLight: true
+});
