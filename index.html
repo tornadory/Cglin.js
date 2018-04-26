@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/Dc.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/math/Vector3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/math/Matrix4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/math/Quaternion.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/math/Color.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/object/Object3D.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/renderer/WebGLRenderer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/renderer/IndexedBufferRenderer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/renderer/Program.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/renderer/Shader.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/geometry/BufferGeometry.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/material/Material.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/material/BasicMaterial.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/material/RawShaderMaterial.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/mesh/Mesh.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/scene/Scene.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/camera/Camera.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/simple/Texture.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/light/AmbientLight.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/light/DirectionLight.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<canvas id="test" width="" height=""></canvas>
+		<script type="text/javascript">
+			var render = new Dc.WebGLRenderer();
+			var geo = new Dc.BufferGeometry();
+			var mat = new Dc.BasicMaterial();
+			var mesh = new Dc.Mesh(geo)
+			var scene = new Dc.Scene();
+			var camera = new Dc.Camera();
+			render.onframe(scene, camera)
+		</script>
+	</body>
+
+</html>
